@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.OnIte
                 noteViewModel.delete(adapter.getNoteAt(viewHolder.getAdapterPosition()));
                 Toast.makeText(MainActivity.this, "Note deleted", Toast.LENGTH_LONG).show();
             }
-        });
+        }).attachToRecyclerView(recyclerView);
 
         adapter.setOnItemClickListener(this);
     }
